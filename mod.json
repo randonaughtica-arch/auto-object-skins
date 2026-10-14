@@ -1,0 +1,56 @@
+{
+    "geode": "5.11.1",
+    "gd": {
+        "win": "2.2081",
+        "mac": "2.2081",
+        "android": "2.2081",
+        "ios": "2.2081"
+    },
+    "id": "jeremy.auto-object-skins",
+    "name": "Auto Object Skins",
+    "version": "v1.0.0",
+    "developer": "Jeremy",
+    "description": "Turn a level's block deco into ready-to-use custom objects",
+    "tags": ["editor", "utility"],
+    "settings": {
+        "min-repeats": {
+            "type": "int",
+            "name": "Minimum Repeats",
+            "description": "How many times a block + deco combo has to appear in the level before it counts as a block set. Set to <cy>1</c> to grab every decorated block.",
+            "default": 2,
+            "min": 1,
+            "max": 20,
+            "control": { "slider": true, "input": true }
+        },
+        "max-sets": {
+            "type": "int",
+            "name": "Maximum Sets",
+            "description": "The most block sets to create from one level. The most common ones are kept.",
+            "default": 30,
+            "min": 1,
+            "max": 200,
+            "control": { "slider": false, "input": true }
+        },
+        "attach-distance": {
+            "type": "float",
+            "name": "Attach Distance",
+            "description": "How far (in units, a block is <cy>30</c>) a decoration can stick out past a block's edge and still be counted as part of that block.",
+            "default": 10.0,
+            "min": 0.0,
+            "max": 60.0,
+            "control": { "slider": true, "input": true, "arrows": false }
+        },
+        "include-slopes": {
+            "type": "bool",
+            "name": "Include Slopes",
+            "description": "Also make sets from decorated slopes, not just blocks.",
+            "default": true
+        },
+        "strip-groups": {
+            "type": "bool",
+            "name": "Remove Group IDs",
+            "description": "Remove group IDs and editor layers from the generated objects so they don't interfere with your triggers.",
+            "default": true
+        }
+    }
+}
